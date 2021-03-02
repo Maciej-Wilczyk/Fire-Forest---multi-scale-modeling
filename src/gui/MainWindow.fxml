@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainWindow">
+    <children>
+        <Canvas fx:id="canvas" height="330.0" layoutX="43.0" layoutY="29.0" width="600.0" />
+      <TextField fx:id="textField" layoutX="709.0" layoutY="95.0" prefHeight="25.0" prefWidth="182.0" />
+      <Button fx:id="resetButton" layoutX="709.0" layoutY="368.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="59.0" text="Reset" />
+      <Button layoutX="709.0" layoutY="405.0" mnemonicParsing="false" onAction="#makeGreenBlueWithDilatationX2" prefHeight="25.0" prefWidth="59.0" text="Binary" />
+      <Button layoutX="709.0" layoutY="440.0" mnemonicParsing="false" onAction="#start" prefHeight="25.0" prefWidth="59.0" text="Fire!" />
+      <Button layoutX="709.0" layoutY="472.0" mnemonicParsing="false" onAction="#stop" prefHeight="25.0" prefWidth="59.0" text="Pause" />
+      <Label fx:id="label" layoutX="280.0" layoutY="432.0" text="h:00 min:00">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBox" layoutX="666.0" layoutY="216.0" onMouseClicked="#checkChoiceBoxV" prefWidth="150.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="NO WIND" />
+                  <String fx:value="NORTH" />
+                  <String fx:value="SOUTH" />
+                  <String fx:value="EAST" />
+                  <String fx:value="WEST" />
+                  <String fx:value="NORTH-EAST" />
+                  <String fx:value="NORTH-WEST" />
+                  <String fx:value="SOUTH-EAST" />
+                  <String fx:value="SOUTH-WEST" />
+
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+      <Label alignment="CENTER" layoutX="666.0" layoutY="199.0" prefHeight="17.0" prefWidth="150.0" text="WIND (FROM)" />
+      <Label alignment="CENTER" layoutX="664.0" layoutY="257.0" prefHeight="17.0" prefWidth="149.0" text="WIND FORCE" />
+      <ChoiceBox fx:id="choiceBoxS" layoutX="836.0" layoutY="216.0" onMouseClicked="#checkChoiceBoxS" prefWidth="150.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="SPRING" />
+                  <String fx:value="SUMMER" />
+                  <String fx:value="AUTUMN" />
+                  <String fx:value="WINTER" />
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+      <Label alignment="CENTER" layoutX="837.0" layoutY="199.0" prefHeight="17.0" prefWidth="149.0" text="Season" />
+      <RadioButton fx:id="radio1" layoutX="865.0" layoutY="372.0" mnemonicParsing="false" text="Put down fire" />
+      <RadioButton fx:id="radio2" layoutX="865.0" layoutY="403.0" mnemonicParsing="false" text="Put firefighting team" />
+      <Button layoutX="772.0" layoutY="368.0" mnemonicParsing="false" onAction="#random" text="Random Fire" />
+      <TextField fx:id="textFieldF" layoutX="837.0" layoutY="265.0" />
+      <Label alignment="CENTER" layoutX="841.0" layoutY="248.0" prefHeight="17.0" prefWidth="149.0" text="Firefighters Power" />
+      <Button layoutX="774.0" layoutY="405.0" mnemonicParsing="false" onAction="#randomFF" prefHeight="25.0" prefWidth="84.0" text="Random FFT" />
+      <Slider fx:id="slider1" blockIncrement="1.0" layoutX="668.0" layoutY="271.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="150.0" snapToTicks="true" />
+      <Slider fx:id="slider2" blockIncrement="1.0" layoutX="669.0" layoutY="319.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" prefHeight="14.0" prefWidth="149.0" snapToTicks="true" />
+      <Label layoutX="712.0" layoutY="302.0" prefHeight="17.0" prefWidth="59.0" text="HUMIDITY" />
+      <Slider fx:id="slider3" blockIncrement="1.0" layoutX="836.0" layoutY="319.0" max="10.0" minorTickCount="0" prefHeight="14.0" prefWidth="150.0" />
+      <Label alignment="CENTER" layoutX="879.0" layoutY="302.0" prefHeight="17.0" prefWidth="66.0" text="RAINFALL" />
+    </children>
+</AnchorPane>
